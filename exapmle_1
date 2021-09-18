@@ -4,5 +4,6 @@ import seaborn as sns
 df=pd.read_csv('ruff_csv.csv')
 df.drop(columns="Unnamed: 0",inplace=True)
 #print(df)
+#we can pass estimator with value =mean, median we imported as a numpy obj
 sns.barplot(x='name',y='price',data=df,palette='spring',hue='demand',orient="v",order=['bronze','silver','gold'],
            linewidth=0.5,edgecolor=".002")
